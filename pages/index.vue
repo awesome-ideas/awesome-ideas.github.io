@@ -9,12 +9,19 @@
       </header>
       <div class="outline-grid__content">
         <amp-list
-                width="auto"
-                height="100"
-                layout="fixed-height"
-                src="https://api.jsonbin.io/b/5f787901302a837e95739b16"
-                items="."
+          width="auto"
+          height="100"
+          layout="fixed-height"
+          src="https://api.jsonbin.io/b/5f787901302a837e95739b16"
+          items="."
         >
+          <div placeholder>
+            <div class="idea-card-list">
+              <div class="idea-card" v-for="index in 8" :key="index">
+                <h2 class="idea-card__title">Carregando</h2>
+              </div>
+            </div>
+          </div>
           <amp-mustache>
             <template v-pre>
               <div class="idea-card">
@@ -48,7 +55,8 @@ $card-background__baby-yellow: #fef4bf
   height: 3px
   @include background-stripes(to right, $card-background__blue, $card-background__pink, $card-background__yellow, $card-background__orange, $card-background__baby-pink, $card-background__green, $card-background__baby-yellow)
 
-amp-list [role='list']
+amp-list [role='list'],
+.idea-card-list
   margin: 0 0 spacing(1) 0
   display: grid
   padding: 0 spacing(1)
