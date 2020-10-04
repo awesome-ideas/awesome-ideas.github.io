@@ -1,33 +1,38 @@
 <template>
-  <div class="outline-grid--no-sidebar">
-    <header class="outline-grid__header">
-      <h1 class="outline-grid__header__content">
-        Ideias para Aplicativos
-      </h1>
-    </header>
-    <div class="outline-grid__content">
-      <amp-list
-          width="auto"
-          height="100"
-          layout="fixed-height"
-          src="https://api.jsonbin.io/b/5f787901302a837e95739b16"
-          items="."
-      >
-        <amp-mustache>
-          <template v-pre>
-            <div class="idea-card">
-              <h2 class="idea-card__title">{{title}}</h2>
-              <p class="idea-card__subtitle">{{subtitle}}</p>
-            </div>
-          </template>
-        </amp-mustache>
-      </amp-list>
+  <div>
+    <span class="stripes"></span>
+    <div class="outline-grid--no-sidebar">
+      <header class="outline-grid__header">
+        <div class="outline-grid__header__content">
+          <h1>Ideias para Aplicativos</h1>
+        </div>
+      </header>
+      <div class="outline-grid__content">
+        <amp-list
+                width="auto"
+                height="100"
+                layout="fixed-height"
+                src="https://api.jsonbin.io/b/5f787901302a837e95739b16"
+                items="."
+        >
+          <amp-mustache>
+            <template v-pre>
+              <div class="idea-card">
+                <h2 class="idea-card__title">{{title}}</h2>
+                <p class="idea-card__subtitle">{{subtitle}}</p>
+              </div>
+            </template>
+          </amp-mustache>
+        </amp-list>
+      </div>
     </div>
   </div>
+
 </template>
 
 <style lang="sass">
 @import '../sass/0 -helpers/breakpoints'
+@import '../sass/0 -helpers/mixins/background-stripes'
 @import '../sass/2 - layout/outline-grid'
 
 $card-background__blue: #5cc4bd
@@ -37,6 +42,11 @@ $card-background__orange: #ff8b2e
 $card-background__baby-pink: #f395b3
 $card-background__green: #77bb63
 $card-background__baby-yellow: #fef4bf
+
+.stripes
+  display: block
+  height: 3px
+  @include background-stripes(to right, $card-background__blue, $card-background__pink, $card-background__yellow, $card-background__orange, $card-background__baby-pink, $card-background__green, $card-background__baby-yellow)
 
 amp-list [role='list']
   margin: 0 0 spacing(1) 0
