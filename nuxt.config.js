@@ -30,11 +30,8 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://github.com/nuxt-community/amp-module
-    '@nuxtjs/amp',
-    // https://www.npmjs.com/package/nuxt-cname-module
-    ['nuxt-cname-module', { baseUrl: 'ideias.dev.br' }]
+    '@nuxtjs/amp'
   ],
-
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
