@@ -4,35 +4,35 @@ $spacing-directions: top right bottom left
 @for $i from 1 through length($spacings)
   @each $spacing-direction in $spacing-directions
     .p-margin-#{$spacing-direction}-#{$i}
-      margin-#{$spacing-direction}: nth($spacings, $i) !important
+      margin-#{$spacing-direction}: nth($spacings, $i)
 
     .p-padding-#{$spacing-direction}-#{$i}
-      padding-#{$spacing-direction}: nth($spacings, $i) !important
+      padding-#{$spacing-direction}: nth($spacings, $i)
 
     .p-margin-negative-#{$spacing-direction}-#{$i}
-      margin-#{$spacing-direction}: nth($spacings, $i) * -1 !important
+      margin-#{$spacing-direction}: nth($spacings, $i) * -1
 
     .p-margin-horizontal-#{$i}
-      margin-left: nth($spacings, $i) !important
-      margin-right: nth($spacings, $i) !important
+      margin-left: nth($spacings, $i)
+      margin-right: nth($spacings, $i)
 
     .p-padding-horizontal-#{$i}
-      padding-left: nth($spacings, $i) !important
-      padding-right: nth($spacings, $i) !important
+      padding-left: nth($spacings, $i)
+      padding-right: nth($spacings, $i)
 
     .p-margin-vertical-#{$i}
-      margin-top: nth($spacings, $i) !important
-      margin-bottom: nth($spacings, $i) !important
+      margin-top: nth($spacings, $i)
+      margin-bottom: nth($spacings, $i)
 
     .p-padding-vertical-#{$i}
-      padding-top: nth($spacings, $i) !important
-      padding-bottom: nth($spacings, $i) !important
+      padding-top: nth($spacings, $i)
+      padding-bottom: nth($spacings, $i)
 
     .p-padding-#{$i}
-      padding: nth($spacings, $i) !important
+      padding: nth($spacings, $i)
 
     .p-margin-#{$i}
-      margin: nth($spacings, $i) !important
+      margin: nth($spacings, $i)
 
 @function spacing($spacing-index)
   @return nth($spacings, $spacing-index)

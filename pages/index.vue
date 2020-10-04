@@ -43,7 +43,7 @@ amp-list [role='list']
   display: grid
   padding: 0 spacing(1)
   grid-gap: spacing(3)
-  grid-template-columns: repeat(2, minmax(calc(50% - 20px), 1fr))
+  grid-template-columns: 100%
 
   @media(min-width: $screen-tablet-min)
     padding: 0

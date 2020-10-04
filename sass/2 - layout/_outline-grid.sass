@@ -43,13 +43,19 @@
 
     +element("content")
       grid-area: header-content
-      padding: 0
+      padding: 0 spacing(2)
+
+      @media(min-width: $screen-tablet-min)
+        padding: 0 spacing(1)
 
   +element("content")
     grid-area: content
     position: relative
+    margin: spacing(2)
+
     @media(min-width: $screen-tablet-min)
       padding-bottom: spacing(2)
+      margin: spacing(1)
 
   +element("sidebar")
     grid-area: sidebar
