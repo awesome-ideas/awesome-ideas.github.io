@@ -48,7 +48,12 @@ amp-list [role='list']
   @media(min-width: $screen-tablet-min)
     padding: 0
     grid-gap: spacing(2)
-    grid-template-columns: repeat(4, minmax(calc(25% - 20px), 1fr))
+    grid-template-columns: repeat(3, minmax(260px, 1fr))
+
+  @media(min-width: $screen-desktop-min)
+    padding: 0
+    grid-gap: spacing(2)
+    grid-template-columns: repeat(4, minmax(220px, 1fr))
 
 .idea-card
   font-family: sans-serif
