@@ -114,7 +114,16 @@ amp-list [role='list'],
 
 <script>
 export default {
-    amp: 'only',
-    ampLayout: 'default.amp'
+  amp: 'only',
+  ampLayout: 'default.amp',
+  head() {
+    return {
+      link: [{
+        hid: 'canonical',
+        rel: 'canonical',
+        href: 'http://ideias.dev.br/'
+      }]
+    }
+  }
 }
 </script>
