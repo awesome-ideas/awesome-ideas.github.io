@@ -30,12 +30,13 @@
 @import '../sass/0 -helpers/breakpoints'
 @import '../sass/2 - layout/outline-grid'
 
-$card_background__red: #ff0200
-$card_background__yellow: #fec600
-$card_background__pink: #ff8c8b
-$card_background__blue: #05afff
-$card_background__green: #67dc00
-$card_background__purple: #7803ff
+$card-background__blue: #5cc4bd
+$card-background__pink: #f46d85
+$card-background__yellow: #ece133
+$card-background__orange: #ff8b2e
+$card-background__baby-pink: #f395b3
+$card-background__green: #77bb63
+$card-background__baby-yellow: #fef4bf
 
 amp-list [role='list']
   margin: 0 0 spacing(1) 0
@@ -58,23 +59,26 @@ amp-list [role='list']
   color: #1a181b
   background: #fff
 
-  &:nth-child(6n)
-    background-color: $card_background__red
-
-  &:nth-child(6n+1)
-    background-color: $card_background__yellow
-
-  &:nth-child(6n+2)
-    background-color: $card_background__pink
-
-  &:nth-child(6n+3)
+  &:nth-child(7n)
     background-color: $card_background__blue
 
-  &:nth-child(6n+4)
+  &:nth-child(7n+1)
+    background-color: $card_background__pink
+
+  &:nth-child(7n+2)
+    background-color: $card_background__yellow
+
+  &:nth-child(7n+3)
+    background-color: $card_background__orange
+
+  &:nth-child(7n+4)
+    background-color: $card_background__baby-pink
+
+  &:nth-child(7n+5)
     background-color: $card_background__green
 
-  &:nth-child(6n+5)
-    background-color: $card_background__purple
+  &:nth-child(7n+6)
+    background-color: $card_background__baby-yellow
 
   +element('title')
     line-height: 1.6
