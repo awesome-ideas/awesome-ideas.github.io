@@ -6284,7 +6284,7 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-cname-module@^1.1.1:
+nuxt-cname-module@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/nuxt-cname-module/-/nuxt-cname-module-1.1.1.tgz#05715c373670d944be4d7aa73f3dfbc31e7e2814"
   integrity sha512-zjcU+CHAqg6tEzTgPpcCOfP1JSmYHrff54Boy/Fly3zI4IQa0ZcAL8MjbzmRPYvYmaC6PB7KkOWhkxe8KU0ZxA==
