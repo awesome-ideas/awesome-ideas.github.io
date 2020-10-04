@@ -2,7 +2,7 @@
   <div class="outline-grid--no-sidebar">
     <header class="outline-grid__header">
       <h1 class="outline-grid__header__content">
-        Ideias para Aplicativos 🆓
+        Ideias para Aplicativos
       </h1>
     </header>
     <div class="outline-grid__content">
@@ -57,7 +57,8 @@ amp-list [role='list']
   flex-direction: column
   padding: spacing(2)
   color: #1a181b
-  background: #fff
+  cursor: pointer
+  box-shadow: 1px 2px hsl(0, 0, 85%)
 
   &:nth-child(7n)
     background-color: $card_background__blue
