@@ -4,7 +4,7 @@
     <div class="outline-grid--no-sidebar">
       <header class="outline-grid__header">
         <div class="outline-grid__header__content">
-          <h1>Ideias para Aplicativos</h1>
+          <h1>Ideias de Aplicativos</h1>
         </div>
       </header>
       <div class="outline-grid__content">
@@ -118,6 +118,12 @@ export default {
   ampLayout: 'default.amp',
   head() {
     return {
+      title: 'Ideias de aplicativos',
+      meta: [{
+        hid: 'meta-description',
+        name: 'description',
+        content: 'Ideias de aplicativos, websites e projetos. Encontre ideias para aplicativos gratuitas e separadas por categorias, também ideias para trabalhos acadêmicos, tcc, tg e software livre.'
+      }],
       link: [{
         hid: 'canonical',
         rel: 'canonical',
