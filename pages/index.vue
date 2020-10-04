@@ -120,7 +120,7 @@ export default {
     return {
       title: 'Ideias de aplicativos',
       meta: [{
-        hid: 'meta-description',
+        hid: 'description',
         name: 'description',
         content: 'Ideias de aplicativos, websites e projetos. Encontre ideias para aplicativos gratuitas e separadas por categorias, também ideias para trabalhos acadêmicos, tcc, tg e software livre.'
       }],
