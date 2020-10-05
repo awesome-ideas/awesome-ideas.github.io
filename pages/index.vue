@@ -151,7 +151,7 @@ export default {
       link: [{
         hid: 'canonical',
         rel: 'canonical',
-        href: 'http://ideias.dev.br/'
+        href: 'https://ideias.dev.br/'
       }]
     }
   }
