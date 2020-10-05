@@ -4,16 +4,26 @@
     <div class="outline-grid--no-sidebar">
       <header class="outline-grid__header">
         <div class="outline-grid__header__content">
-          <h1>Ideias de Aplicativos</h1>
+          <h1 class="title--is-1">Ideias de Aplicativos</h1>
+          <h3 class="title--is-2">Encontre aqui ideias de aplicativos gratuitas e sob domínio público. São ideias de website, ideias de produtos, startups ou mesmo projetos escolhares ou trabalhos de graduação.</h3>
+          <!--<input type="text" on="change:AMP.setState({
+            filteredIdeas: allIdeas.filter(x => event.value == '' ? true : x.title.indexOf(event.value) >= 0 || x.subtitle.indexOf(event.value) >= 0)
+          })">-->
         </div>
       </header>
       <div class="outline-grid__content">
+        <amp-state
+            id="allIdeas"
+            src="https://ideias.dev.br/api/ideas.json">
+        </amp-state>
         <amp-list
           width="auto"
           height="100"
           layout="fixed-height"
-          src="https://api.jsonbin.io/b/5f787901302a837e95739b16"
+          src="https://ideias.dev.br/api/ideas.json"
+          [src]="filteredIdeas"
           items="."
+          binding="no"
         >
           <div placeholder>
             <div class="idea-card-list">
@@ -73,6 +83,18 @@ amp-list [role='list'],
     grid-gap: spacing(2)
     grid-template-columns: repeat(4, minmax(220px, 1fr))
 
+.title
+  color: #333
+
+  +modifier("is-1")
+    font-size: 32px
+
+  +modifier("is-2")
+    font-size: 16px
+    line-height: 1.5
+    color: #727885
+    font-weight: 400
+
 .idea-card
   font-family: sans-serif
   height: 260px
@@ -109,6 +131,8 @@ amp-list [role='list'],
 
   +element('subtitle')
     line-height: 1.6
+    max-height: 100%
+    overflow: hidden
 
 </style>
 
