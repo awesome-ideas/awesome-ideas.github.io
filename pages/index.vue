@@ -14,13 +14,13 @@
       <div class="outline-grid__content">
         <amp-state
             id="allIdeas"
-            src="https://ideias.dev.br/api/ideas.json">
+            src="https://raw.githubusercontent.com/ideias-de-aplicativos/api/gh-pages/1/ideias.json">
         </amp-state>
         <amp-list
           width="auto"
           height="100"
           layout="fixed-height"
-          src="https://ideias.dev.br/api/ideas.json"
+          src="https://raw.githubusercontent.com/ideias-de-aplicativos/api/gh-pages/1/ideias.json"
           [src]="filteredIdeas"
           items="."
           binding="no"
