@@ -22,7 +22,7 @@
           layout="fixed-height"
           src="https://raw.githubusercontent.com/ideias-de-aplicativos/api/gh-pages/1/ideias.json"
           [src]="filteredIdeas"
-          items="."
+          items="ideas"
           binding="no"
         >
           <div placeholder>
