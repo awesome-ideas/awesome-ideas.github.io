@@ -20,33 +20,59 @@
 
   +modifier("no-sidebar")
     @media(min-width: $screen-tablet-min)
-      grid-template-areas: "header header header header header" ". content content content ." ". footer footer footer ."
+      grid-template-areas: ". header header header ." ". content content content ." ". footer footer footer ."
 
     +modifier("gap-1")
       grid-gap: spacing(1)
 
   +element("header")
-    display: grid
-    background-color: #f9fafb
-    grid-gap: inherit
-    grid-template-areas: "header-content"
-    grid-template-columns: repeat(1, minmax($screen-phone-min, 1fr))
+    display: flex
     border-bottom: 1px solid #f6f6f6
     grid-area: header
     margin: 0
-    padding: spacing(4) 0 spacing(4)
+    padding: spacing(4) 0 0
+    flex-direction: column
 
     @media(min-width: $screen-tablet-min)
       margin: 0 0 spacing(2) 0
-      grid-template-columns: $outline-grid__template-columns__from-table-value
-      grid-template-areas: ". header-content header-content header-content ."
 
-    +element("content")
-      grid-area: header-content
-      padding: 0 spacing(2)
+    +element("line")
+      display: flex
+      padding-bottom: spacing(2)
 
-      @media(min-width: $screen-tablet-min)
-        padding: 0 spacing(1)
+    +element("logo")
+      background-color: #f46d85
+      padding: 3px
+      text-align: center
+      border-radius: 4px
+      font-size: 30px
+      line-height: 40px
+      width: 40px
+      display: inline-block
+      border: 1px solid #f46d85
+      vertical-align: middle
+
+    +element("search")
+      display: flex
+      line-height: 40px
+      border: 1px solid #edeae8
+      border-radius: 4px
+      padding: 3px 10px
+      min-width: 300px
+      margin: 0 spacing(2)
+      font-size: 16px
+      flex-grow: 1
+
+      +element("input")
+        height: 100%
+        margin: 0
+        padding: 0
+        width: 100%
+        border: 0
+        outline: none
+
+      +element("icon")
+        font-size: 24px
 
   +element("content")
     grid-area: content
