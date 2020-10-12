@@ -7,7 +7,7 @@
                     <input type="text" class="outline-grid__header__search__input" placeholder="Encontre ideias de aplicativos">
                     <span class="outline-grid__header__search__icon">🔎</span>
                 </span>
-                <button role="button" tabindex="1" class="button--primary">Doar minha ideia</button>
+                <button role="button" tabindex="1" class="button--primary" on="tap:idea-lightbox">Doar minha ideia</button>
             </div>
             <div class="outline-grid__header__line">
                 <button role="button" tabindex="1" class="button--small">Complexidade</button>
@@ -47,6 +47,7 @@
                 </amp-mustache>
             </amp-list>
         </div>
+        <idea-lightbox />
     </div>
 </template>
 
@@ -168,9 +169,13 @@ amp-list [role='list'],
 </style>
 
 <script>
+import IdeaLightbox from '../components/IdeaLightbox'
 export default {
     amp: 'only',
     ampLayout: 'default.amp',
+    components: {
+        IdeaLightbox
+    },
     head() {
         return {
             title: 'Ideias de aplicativos',
